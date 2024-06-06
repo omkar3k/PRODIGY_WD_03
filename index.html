@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe with Sujal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tic-Tac-Toe with Sujal</h1>
+        <div id="mode-selection">
+            <button class="mode-button" id="ai-mode">Play vs AI</button>
+            <button class="mode-button" id="pvp-mode">Play vs Player</button>
+        </div>
+        <div class="board" id="board" style="display: none;">
+            <div class="cell top left" data-index="0"></div>
+            <div class="cell top" data-index="1"></div>
+            <div class="cell top right" data-index="2"></div>
+            <div class="cell left" data-index="3"></div>
+            <div class="cell center" data-index="4"></div>
+            <div class="cell right" data-index="5"></div>
+            <div class="cell bottom left" data-index="6"></div>
+            <div class="cell bottom" data-index="7"></div>
+            <div class="cell bottom right" data-index="8"></div>
+        </div>
+        <button id="restart" style="display: none;">Restart Game</button>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

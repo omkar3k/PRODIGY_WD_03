@@ -1,0 +1,110 @@
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #9be5a8; /* Green jungle background */
+    background-image: url('jungle.jpg'); /* Jungle background image */
+    background-size: cover;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.8); /* White container with transparency */
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #4d2600; /* Dark brown text color */
+    font-size: 2em;
+}
+
+#mode-selection {
+    margin-bottom: 20px;
+}
+
+.mode-button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #8b572a; /* Brown button color */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.mode-button:hover {
+    background-color: #6e431e; /* Darker brown on hover */
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    margin-top: 20px;
+    position: relative;
+    background-color: #8b572a; /* Brown board background color */
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); /* Inset shadow for depth */
+    padding: 5px; /* Padding to show border */
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #8b572a; /* Brown cell color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    cursor: pointer;
+    position: relative;
+    border-radius: 10px; /* Rounded corners for cell */
+    overflow: hidden; /* Hide overflow for rounded corners */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); /* Inner shadow for depth */
+}
+
+.cell:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px; /* Size of the hole */
+    height: 70px; /* Size of the hole */
+    background-color: #f9fcfa; /* Green color for the hole */
+    border-radius: 50%;
+    z-index: -1; /* Behind the content */
+}
+
+.cell span {
+    font-size: 2.5em; /* Decrease size of X and O */
+    font-family: 'Arial', sans-serif;
+    z-index: 1; /* Above the hole */
+    color: #4d2600; /* Brown color for X and O */
+}
+
+#restart {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #8b572a; /* Brown restart button */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#restart:hover {
+    background-color: #6e431e; /* Darker brown on hover */
+}
